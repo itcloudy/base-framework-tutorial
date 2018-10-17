@@ -6,7 +6,7 @@
 
 因为是写一个系列文章， 故文章会从零开始来搭建这个框架，大部分代码会从原有的项目copy过来。主要目的记录该框架是如何搭建的，以及在上面如果快速开发一个后台应用。
 
-gin框架地址[https://github.com/gin-gonic/gin](https://github.com/gin-gonic/gin)
+gin框架地址:[https://github.com/gin-gonic/gin](https://github.com/gin-gonic/gin)
 
 ## 开发环境
 
@@ -28,9 +28,11 @@ gin框架地址[https://github.com/gin-gonic/gin](https://github.com/gin-gonic/g
 
 项目目录下执行`govendor init`，在项目目录下将会出现`vendor`文件夹
 
+添加项目需要使用到的包
 
+```
 
-
+```
 
 
 
