@@ -93,5 +93,29 @@ func LoadConfigInformation(configPath string) (err error) {
 }
 ```
 
-修改`main.go`的代码，在`main`函数中调用`LoadConfigInformation ` ,
+修改`main.go`的代码，在`main`函数中调用`LoadConfigInformation` ,
+
+```
+func main() {
+	var err error
+	fPath, _ := os.Getwd()
+	fPath = path.Join(fPath, "conf")
+	configPath := flag.String("c", fPath, "config file path")
+	flag.Parse()
+	err = system.LoadConfigInformation(*configPath)
+	fmt.Printf("%+v\n",common.ConfigInfo.Server)
+	if err != nil {
+		return
+	}
+}
+```
+
+运行，查看打印结果，测试通过之后删除`fmt.Printf("%+v\n",common.ConfigInfo.Server)`
+
+```
+&{Mode:debug Host:0.0.0.0 Port:8000 EnableHttps:false CertFile:conf/https/cert.pem KeyFile:conf/https/key.pem JwtPubKeyPath:conf/jwt/tm.rsa.pub JwtPriKeyPath:conf/jwt/tm.rsa TokenExpireSecond:360µs SystemStaticFilePath:system_statics}
+
+```
+
+
 
