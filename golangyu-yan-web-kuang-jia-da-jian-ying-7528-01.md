@@ -37,7 +37,6 @@ gin框架地址:[https://github.com/gin-gonic/gin](https://github.com/gin-gonic/
 ```
 govendor fetch github.com/gin-gonic/gin
 govendor fetch gopkg.in/yaml.v2
-
 ```
 
 ### 创建main文件
@@ -56,7 +55,7 @@ func main() {
 
 ### 配置文件
 
-创建配置文件夹conf，后期里面将包含config.yml https使用的证书，jwt使用的公私钥，以及初始化数据文件
+创建配置文件夹`conf`，后期里面将包含`config.yml` https使用的证书，jwt使用的公私钥，以及初始化数据文件
 
 ```
 cloudydeMacBook-Pro:base-framework cloudy$ tree 
