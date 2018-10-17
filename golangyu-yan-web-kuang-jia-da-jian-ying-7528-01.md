@@ -18,9 +18,7 @@
 
 项目名称为base-framework,如果其他项目使用或者修改项目名称，需要修改代码中包引入涉及到的项目名，可以批量替换。
 
-![](/assets/01-project-create.png)
-
-
+![](/assets/01-create-project.png)
 
 
 
