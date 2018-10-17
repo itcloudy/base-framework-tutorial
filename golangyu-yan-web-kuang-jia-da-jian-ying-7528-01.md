@@ -11,8 +11,7 @@
 * PC: Mac
 * IDE: Goland 2018.3 EAP
 * GO:go1.10 darwin/amd64 
-
-
+* 环境变量`GOPATH:/Users/cloudy/Documents/go`    
 
 
 
