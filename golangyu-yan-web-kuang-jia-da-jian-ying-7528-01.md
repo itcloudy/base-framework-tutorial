@@ -11,15 +11,12 @@
 * PC: Mac
 * IDE: Goland 2018.3 EAP
 * GO:go1.10 darwin/amd64 
-* 环境变量`GOPATH:/Users/cloudy/Documents/go`    
+* 环境变量`GOPATH:/Users/cloudy/Documents/go`  
+* 包依赖管理：govendor
 
 ## 新建项目
 
-项目位置为`$GOPATH`下的`src`目录下，不再放到`github.com/itcloudy`下
-
-
+项目名称为base-framework,如果其他项目使用或者修改项目名称，需要修改代码中包引入涉及到的项目名，可以批量替换
 
 ![](/assets/import.png)
-
-
 
