@@ -22,6 +22,8 @@ gin框架地址:[https://github.com/gin-gonic/gin](https://github.com/gin-gonic/
 
 项目名称为base-framework,如果其他项目使用或者修改项目名称，需要修改代码中包引入涉及到的项目名，可以批量替换。
 
+![](/assets/01-create-project.png)
+
 ### 依赖初始化
 
 项目目录下执行`govendor init`，在项目目录下将会出现`vendor`文件夹
@@ -34,6 +36,8 @@ gin框架地址:[https://github.com/gin-gonic/gin](https://github.com/gin-gonic/
 
 ```
 govendor fetch github.com/gin-gonic/gin
+govendor fetch gopkg.in/yaml.v2
+
 ```
 
 ### 创建main文件
