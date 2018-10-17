@@ -13,5 +13,13 @@
 * GO:go1.10 darwin/amd64 
 * 环境变量`GOPATH:/Users/cloudy/Documents/go`    
 
+## 新建项目
+
+项目位置为`$GOPATH`下的`src`目录下，不再放到`github.com/itcloudy`下
+
+
+
+![](/assets/import.png)
+
 
 
