@@ -22,7 +22,7 @@ gin框架地址:[https://github.com/gin-gonic/gin](https://github.com/gin-gonic/
 
 项目名称为base-framework,如果其他项目使用或者修改项目名称，需要修改代码中包引入涉及到的项目名，可以批量替换。
 
-![](/assets/01-create-project.png)
+
 
 ### 依赖初始化
 
@@ -38,11 +38,36 @@ gin框架地址:[https://github.com/gin-gonic/gin](https://github.com/gin-gonic/
 govendor fetch github.com/gin-gonic/gin
 ```
 
+### 创建main文件
+
+需要将package名改为main里面的内容为
+
+```
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("base framework")
+}
+```
+
 ### 配置文件
 
-创建配置文件,手动创建或者执行命令`mkdir conf` 
+创建配置文件夹conf，后期里面将包含config.yml https使用的证书，jwt使用的公私钥，以及初始化数据文件
+
+```
+cloudydeMacBook-Pro:base-framework cloudy$ tree 
+.
+├── conf
+│   ├── config.yml
+│   ├── https
+│   └── jwt
+├── main.go
+└── vendor
 
 
+```
 
 
 
