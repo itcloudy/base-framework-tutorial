@@ -35,9 +35,5 @@ var (
 
 ## 配置文件加载
 
-创建`system`文件夹，增加`config.go`文件,`LoadConfigInformation`函数用于获得配置文件的信息
-
-
-
-
+创建`system`文件夹，增加`config.go`文件,`LoadConfigInformation`函数用于获得配置文件的信息,该函数默认会从当前项目的`conf`文件夹加载`config.yml`，获得其中的信息
 
