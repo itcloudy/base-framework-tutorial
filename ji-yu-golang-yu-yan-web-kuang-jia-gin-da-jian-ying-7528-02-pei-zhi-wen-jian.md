@@ -97,24 +97,23 @@ func LoadConfigInformation(configPath string) (err error) {
 
 ```
 func main() {
-	var err error
-	fPath, _ := os.Getwd()
-	fPath = path.Join(fPath, "conf")
-	configPath := flag.String("c", fPath, "config file path")
-	flag.Parse()
-	err = system.LoadConfigInformation(*configPath)
-	fmt.Printf("%+v\n",common.ConfigInfo.Server)
-	if err != nil {
-		return
-	}
+    var err error
+    fPath, _ := os.Getwd()
+    fPath = path.Join(fPath, "conf")
+    configPath := flag.String("c", fPath, "config file path")
+    flag.Parse()
+    err = system.LoadConfigInformation(*configPath)
+    fmt.Printf("%+v\n",common.ConfigInfo.Server)
+    if err != nil {
+        return
+    }
 }
 ```
 
-运行，查看打印结果，测试通过之后删除`fmt.Printf("%+v\n",common.ConfigInfo.Server)`
+运行，查看打印结果，测试通过之后删除`fmt.Printf("%+v\n",common.ConfigInfo.Server)`和对应的包
 
 ```
 &{Mode:debug Host:0.0.0.0 Port:8000 EnableHttps:false CertFile:conf/https/cert.pem KeyFile:conf/https/key.pem JwtPubKeyPath:conf/jwt/tm.rsa.pub JwtPriKeyPath:conf/jwt/tm.rsa TokenExpireSecond:360µs SystemStaticFilePath:system_statics}
-
 ```
 
 
