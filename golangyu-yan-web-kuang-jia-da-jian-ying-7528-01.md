@@ -28,7 +28,7 @@ gin框架地址:[https://github.com/gin-gonic/gin](https://github.com/gin-gonic/
 
 项目目录下执行`govendor init`，在项目目录下将会出现`vendor`文件夹
 
-添加项目需要使用到的包
+添加项目需要使用到的包,后面章节若使用了新的包将会更新下面的目录
 
 ```
 
