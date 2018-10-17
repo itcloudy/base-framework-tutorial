@@ -28,11 +28,21 @@ gin框架地址:[https://github.com/gin-gonic/gin](https://github.com/gin-gonic/
 
 项目目录下执行`govendor init`，在项目目录下将会出现`vendor`文件夹
 
-添加项目需要使用到的包,后面章节若使用了新的包将会更新下面的目录
+**后续所说的执行命令，默认在Goland IDE的Terminal下**
+
+添加项目需要使用到的包,使用`govendor fetch`命令将会获得最新的包，使用命令将会`govendor add` 使用本地的包
+
+后面章节若使用了新的包将会更新下面的目录
 
 ```
-
+govendor fetch github.com/gin-gonic/gin
 ```
+
+### 配置文件
+
+创建配置文件,手动创建或者执行命令`mkdir conf` 
+
+
 
 
 
