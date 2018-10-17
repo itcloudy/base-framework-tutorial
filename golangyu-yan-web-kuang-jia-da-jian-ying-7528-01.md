@@ -1,4 +1,4 @@
-# 基于golang语言web框架gin搭建应用-01
+# 基于golang语言web框架gin搭建应用-01新建工程
 
 ## 简介
 
@@ -21,8 +21,6 @@ gin框架地址:[https://github.com/gin-gonic/gin](https://github.com/gin-gonic/
 ### 新建项目
 
 项目名称为base-framework,如果其他项目使用或者修改项目名称，需要修改代码中包引入涉及到的项目名，可以批量替换。
-
-
 
 ### 依赖初始化
 
@@ -48,7 +46,7 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("base framework")
+    fmt.Println("base framework")
 }
 ```
 
@@ -60,13 +58,11 @@ func main() {
 cloudydeMacBook-Pro:base-framework cloudy$ tree 
 .
 ├── conf
-│   ├── config.yml
-│   ├── https
-│   └── jwt
+│   ├── config.yml
+│   ├── https
+│   └── jwt
 ├── main.go
 └── vendor
-
-
 ```
 
 
