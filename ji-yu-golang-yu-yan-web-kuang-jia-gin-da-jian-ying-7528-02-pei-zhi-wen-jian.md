@@ -29,9 +29,9 @@
 
 ```
 var (
-	WorkSpace  string       // config
-	ServerInfo              *serverModel       // server config information
-	ConfigInfo *configModel // all server config information
+    WorkSpace  string       // config
+    ServerInfo              *serverModel       // server config information
+    ConfigInfo *configModel // all server config information
 )
 ```
 
@@ -57,4 +57,42 @@ server:
 ## 配置文件加载
 
 创建`system`文件夹，增加`config.go`文件,`LoadConfigInformation`函数用于获得配置文件的信息,该函数默认会从当前项目的`conf`文件夹加载`config.yml`，获得其中的信息
+
+```
+/LoadConfigInformation load config information for application
+func LoadConfigInformation(configPath string) (err error) {
+	var (
+		filePath string
+		wr       string
+	)
+
+	if configPath == "" {
+		wr, _ = os.Getwd()
+		wr = path.Join(wr, "conf")
+
+	} else {
+		wr = configPath
+	}
+	common.WorkSpace = wr
+	filePath = path.Join(common.WorkSpace, "config.yml")
+	configData, err := ioutil.ReadFile(filePath)
+	if err != nil {
+		fmt.Printf(" config file read failed: %s", err)
+		os.Exit(-1)
+
+	}
+	err = yaml.Unmarshal(configData, &common.ConfigInfo)
+	if err != nil {
+		fmt.Printf(" config parse failed: %s", err)
+
+		os.Exit(-1)
+	}
+	// server information
+	common.ServerInfo = common.ConfigInfo.Server
+	return nil
+}
+
+```
+
+
 
