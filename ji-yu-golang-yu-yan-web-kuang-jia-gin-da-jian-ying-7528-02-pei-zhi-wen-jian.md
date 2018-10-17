@@ -4,7 +4,7 @@
 
 ## 配置文件
 
-在`common`文件夹下创建`config.go`文件，输入下面内容
+在`common`文件夹下创建`config.go`文件，输入下面内容,其中tag中的yml对应的值和`config.yml`中的一一对应
 
     //server config will used in file variables.go
     type configModel struct {
@@ -31,6 +31,25 @@
 var (
     ConfigInfo *configModel // all server config information
 )
+```
+
+### 配置config.yml
+
+```
+# config information
+
+# server config information
+server:
+  mode: debug # debug,release
+  host: 0.0.0.0
+  port: 8000
+  token_expire_second: 360000
+  enable_https: false  # 后台开启https
+  cert_file: conf/https/cert.pem  # https对应的私钥
+  key_file: conf/https/key.pem # https对应的公钥
+  jwt_public_key_path: conf/jwt/tm.rsa.pub
+  jwt_private_key_path: conf/jwt/tm.rsa
+  system_static_file_path: system_statics
 ```
 
 ## 配置文件加载
