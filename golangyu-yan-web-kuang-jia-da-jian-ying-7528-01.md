@@ -37,6 +37,7 @@ gin框架地址:[https://github.com/gin-gonic/gin](https://github.com/gin-gonic/
 ```
 govendor fetch github.com/gin-gonic/gin
 govendor fetch gopkg.in/yaml.v2
+govendor fetch github.com/gin-contrib/pprof
 ```
 
 ### 创建main文件
